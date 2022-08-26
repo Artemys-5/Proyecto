@@ -1,5 +1,10 @@
-Alejandro Pérez
-Jhonathan Londoño
+﻿
 Andrés Zambrano
 
 Alejandro Perez
+=======
+Alejandro Pérez
+Jhonathan Londoño
+Andrés Zambrano
+Kalix Osorio, Desarrollador
+
