@@ -3,7 +3,6 @@ package com.proyectoDesarrollo.Entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "movimientoDinero")
@@ -16,9 +15,11 @@ public class MovimientoDinero {
     @Column(name = "monto")
     private float monto;
 
-    //@OneToMany
-    //@JoinColumn(name = "usuario")
-    //private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)  // clave al momento de visualizar
+    private Usuario user;
 
     //Las dos lineas de abajo, funcionaban segun el video
     //    @ManyToOne(cascade = CascadeType.ALL)
@@ -55,12 +56,13 @@ public class MovimientoDinero {
         this.monto = monto;
     }
 
-    /*public Usuario getUsuario() {
-        return usuario;
+    public Usuario getUser() {
+        return user;
     }
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }*/
+
+    public void setUser(Usuario usuario) {
+        this.user = usuario;
+    }
 
     public Empresa getEmpresa() {
         return empresa;

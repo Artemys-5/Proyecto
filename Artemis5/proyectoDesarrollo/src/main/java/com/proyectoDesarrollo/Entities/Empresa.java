@@ -1,10 +1,9 @@
 package com.proyectoDesarrollo.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "empresa")
@@ -22,8 +21,8 @@ public class Empresa {
     @Column(name = "direccion")
     private String direccion;
 
-    @Transient
-    private List<Usuario> usuario;              //array
+    @OneToMany(mappedBy = "enterprise", cascade = CascadeType.ALL)
+    private Set<Usuario> usuario = new HashSet<>();              //array
 
     //@JsonIgnore
     //Esta funcionaba segun el video
@@ -78,11 +77,11 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public List<Usuario> getUsuario() {
+    public Set<Usuario> getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(List<Usuario> usuario) {
+    public void setUsuario(Set<Usuario> usuario) {
         this.usuario = usuario;
     }
 

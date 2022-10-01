@@ -58,7 +58,7 @@ public class ControlUsuario {
     //@PatchMapping("users")
     //public Response updateUsuario(@RequestBody Usuario request){
 
-    //   return this.userServicio.updateUsuarioById(request);
+     //   return this.userServicio.updateUsuarioById(request);
 
     //}
 
@@ -67,10 +67,9 @@ public class ControlUsuario {
     @PatchMapping("user/{id}")
     public Response updateUsuarioById(@PathVariable int id, @RequestBody Usuario request){
 
-
-
         return this.userServicio.updateUsuarioById(id, request);
 
     }
+
 
 }

@@ -9,6 +9,7 @@ import com.proyectoDesarrollo.Services.ServiceTransacciones;
 import com.proyectoDesarrollo.Services.ServiceUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import javax.transaction.Transaction;
 import java.net.URI;
 import java.util.ArrayList;
@@ -45,8 +46,10 @@ public class ControlMovimientosEmp {
     }
     /*@GetMapping("enterprises/{id}/movements")
     public ArrayList<MovimientoDinero> getTranById(@PathVariable int id){
+
         Empresa empresa = new Empresa();
         empresa= this.serviceEmpresa.selectEmpresatById(id);
+
         return this.servMovEmp.selectTranByEmpId(empresa.getId());
     }*/
 
@@ -78,6 +81,12 @@ public class ControlMovimientosEmp {
         return this.serviceEmpresa.MovById(id);
     }
 
+
+    @GetMapping("enterprises/{id}/users")
+    public ArrayList<Usuario> getUserById(@PathVariable int id){
+        return this.serviceEmpresa.UserById(id);
+    }
+
     @DeleteMapping("enterprises/{id}/movements")
 
     public Response deleteMovById(@PathVariable int id){
@@ -87,7 +96,7 @@ public class ControlMovimientosEmp {
         Response response = new Response();
 
         for(int i=0;i<transacciones.size();i++){
-            response=this.servMovEmp.deleteTranById((transacciones.get(i).getId()));
+             response=this.servMovEmp.deleteTranById((transacciones.get(i).getId()));
         }
         return response;
         //servMovEmp.deleteTranById(id);

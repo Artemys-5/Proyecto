@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+img{
+    border-radius: 100px;
+    margin: 10% 0 10% 10%;
+    width: 70%;
+}
+
+nav{ 
+    position: fixed;  
+    width: 20%;
+    height: 768px;
+    background-color: #f1f1f1;
+}
+
+ul{
+    
+    list-style-type: none;    
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    
+}
+li{
+    margin-left: 15%;
+    padding:4px;
+    background-color: gray;
+    margin-top: 30px;    
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+li a{
+    display: block;
+    color: white;
+    font-size: 1.2em;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+a:hover{    
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+
+.container{
+    margin-left: 20%;
+    
+}
+#titulo{
+    text-align: center;
+    padding-top: 50px;
+}
+.container-caja{
+    margin:200px 0 0 140px;
+}
+.container-caja li{
+    margin: 20px;    
+    float: right;      
+    width: 180px;
+    height: 140px;
+    border-radius: 15px;
+}
+.container-caja li a{
+    margin: 10px;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7em;    
+}
+.container-caja li:hover{
+    background: cadetblue;    
+}
+.container h2{
+    margin: 50px 0 0 20px;    
+    font-style: italic;
+    font-size: large;    
+}
+.container button{
+    margin-left: 75%;
+    width: 140px;
+    height: 40px;
+}
+table{
+    width: 80%;
+    margin: 20px 10% 0 8%;
+    border: 1px solid white;
+    
+}
+th, td {
+    padding: 5px;
+    background-color: grey;
+  }
+.btn{    
+    list-style-type: none;    
+    margin-left: 75%;
+    padding: 0;
+    width: 140px;
+    
+}
+.btn li{       
+    background-color: gray;
+    margin-top: 30px;    
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.btn li a{
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;    
+    text-decoration: none;
+}
+.caja-registro{
+    position: absolute;
+    background-color: gray;
+    width: 675px;
+    height: 400px;
+    left: 500px;
+    top: 197px;
+}
+.caja-registro h2{
+    text-align: center;
+    font-size: 1.5em;
+}
+.caja-registro{
+    background-color: #f1f1f1; 
+}
+#formulario{
+    text-align: center;
+    margin-top: 50px; 
+          
+}
+#formulario form label{    
+    font-size: 1.2em;
+    text-align: left;
+}
+#formulario form input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;    
+}
+footer{
+    text-align: center;
+}

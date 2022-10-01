@@ -2,6 +2,7 @@ package com.proyectoDesarrollo.Services;
 
 import com.proyectoDesarrollo.Entities.Empresa;
 import com.proyectoDesarrollo.Entities.MovimientoDinero;
+import com.proyectoDesarrollo.Entities.Usuario;
 import com.proyectoDesarrollo.Repository.IEmpresaRepository;
 import com.proyectoDesarrollo.Repository.IUsuarioRepository;
 import org.springframework.stereotype.Service;
@@ -65,6 +66,11 @@ public class ServiceEmpresa {
         return this.empresaRepository.findMovbyEmpresaID(id);
     }
 
+    public ArrayList<Usuario> UserById(int id){
+        return this.empresaRepository.findUserByEmpresaId(id);
+    }
+
+
     public Response updateEmpresaById(int id, Empresa dato){
         Response response = new Response();
         if(id<=0){
@@ -87,5 +93,7 @@ public class ServiceEmpresa {
 
         return response;
     }
+
+
 
 }

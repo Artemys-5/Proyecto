@@ -1,7 +1,6 @@
 package com.proyectoDesarrollo.Entities;
 
 public enum Enum_RoleName {
-    ADIMN,
+    ADMIN,
     OPERARIO
-
 }

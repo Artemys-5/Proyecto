@@ -2,6 +2,7 @@ package com.proyectoDesarrollo.Repository;
 
 import com.proyectoDesarrollo.Entities.Empresa;
 import com.proyectoDesarrollo.Entities.MovimientoDinero;
+import com.proyectoDesarrollo.Entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,9 @@ public interface IEmpresaRepository extends JpaRepository<Empresa,Integer> {
 
     @Query("SELECT t.transaccion FROM Empresa t WHERE t.id = ?1")
     ArrayList<MovimientoDinero> findMovbyEmpresaID(int id);
+
+    @Query("SELECT t.usuario FROM Empresa t WHERE t.id = ?1")
+    ArrayList<Usuario> findUserByEmpresaId(int id);
 
 
 }
